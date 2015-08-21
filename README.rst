@@ -58,6 +58,15 @@ Authors
 .. _atreal: http://www.atreal.net
 .. _atReal Team: mailto:contact@atreal.net
 
+Contributors
+============
+    
+* `Plone Intranet Team`_
+
+  - Matt Sital-Singh [mattss]
+  - Philip Bauer [pbauer]
+    
+.. _Plone Intranet Team: https://github.com/ploneintranet
 
 Credits
 =======
