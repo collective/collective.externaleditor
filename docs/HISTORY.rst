@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.3 (unreleased)
+1.0.3 (2015-08-21)
 ------------------
 
 - Move controlpanel to z3c.form. Removes dependency on CMFDefault and formlib.
