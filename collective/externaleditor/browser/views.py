@@ -26,6 +26,9 @@ class ExternalEditorEnabledView(BrowserView):
                 not self.isStructuralFolder() and
                 self.isExternalEditLink_())
 
+    def __call__(self):
+        return self.available()
+
     @property
     def _options(self):
         """

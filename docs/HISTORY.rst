@@ -4,8 +4,8 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Manage view call and use it directly in script.
+  [sgeulette]
 
 1.0.3 (2015-08-21)
 ------------------
