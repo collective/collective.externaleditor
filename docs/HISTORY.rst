@@ -7,6 +7,10 @@ Changelog
 - The test suite now works with Plone 5.2, Python3 and Products.ExternalEditor 3
   [ale-rt]
 
+- Remove unused import not compatible with Plone 6
+  [ale-rt]
+
+
 1.0.3 (2015-08-21)
 ------------------
 

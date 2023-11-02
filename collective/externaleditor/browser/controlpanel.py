@@ -6,7 +6,6 @@ from plone.registry.interfaces import IRegistry
 from zope.component import adapts
 from zope.component import getUtility
 from zope.interface import Interface
-from zope.interface import implements
 from zope.schema import Bool
 from zope.schema import Choice
 from zope.schema import List
