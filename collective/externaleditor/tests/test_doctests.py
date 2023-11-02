@@ -1,22 +1,21 @@
-import doctest
+from collective.externaleditor.testing import COLLECTIVE_EXTERNALEDITOR_FUNCTIONAL_TESTING  # noqa: E501
+from plone.testing import layered
 from unittest import TestSuite
 
-from Products.PloneTestCase.PloneTestCase import setupPloneSite
-from Testing.ZopeTestCase import FunctionalDocFileSuite
+import doctest
 
-from plone.app.controlpanel.tests.cptc import ControlPanelTestCase
 
-setupPloneSite()
+OPTIONFLAGS = doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
 
-OPTIONFLAGS = (doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE)
 
 
 def test_suite():
-    suite = TestSuite()
-
-    suite.addTest(FunctionalDocFileSuite('controlpanel.txt',
-        optionflags=OPTIONFLAGS,
-        package="collective.externaleditor.tests",
-        test_class=ControlPanelTestCase))
-
-    return suite
+    return TestSuite(
+        [
+            layered(
+                doctest.DocFileSuite(ft, optionflags=OPTIONFLAGS,),
+                layer=COLLECTIVE_EXTERNALEDITOR_FUNCTIONAL_TESTING,
+            )
+            for ft in ["controlpanel.txt"]
+        ]
+    )
