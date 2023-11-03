@@ -1,9 +1,5 @@
 from collective.externaleditor import ExternalEditorMessageFactory as _
 from plone.app.registry.browser import controlpanel
-from plone.registry.interfaces import IRegistry
-from Products.CMFPlone.interfaces import IPloneSiteRoot
-from zope.component import adapts
-from zope.component import getUtility
 from zope.interface import Interface
 from zope.schema import Bool
 from zope.schema import Choice
