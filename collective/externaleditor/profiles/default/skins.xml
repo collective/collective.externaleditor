@@ -1,12 +1,15 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <object name="portal_skins">
 
- <object name="externaleditor"
-    meta_type="Filesystem Directory View"
-    directory="collective.externaleditor:skins/externaleditor" />
+  <object directory="collective.externaleditor:skins/externaleditor"
+          meta_type="Filesystem Directory View"
+          name="externaleditor"
+  />
 
- <skin-path name="*">
-  <layer name="externaleditor" insert-after="custom" />
- </skin-path>
+  <skin-path name="*">
+    <layer insert-after="custom"
+           name="externaleditor"
+    />
+  </skin-path>
 
 </object>
