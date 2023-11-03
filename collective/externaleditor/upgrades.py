@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-from collective.externaleditor.browser.controlpanel import \
-    IExternalEditorSchema
+from collective.externaleditor.browser.controlpanel import IExternalEditorSchema
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 from zope.component.hooks import getSite
 
 import logging
+
+
 logger = logging.getLogger(__name__)
 _marker = []
 

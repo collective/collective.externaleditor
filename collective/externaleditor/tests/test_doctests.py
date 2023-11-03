@@ -1,4 +1,6 @@
-from collective.externaleditor.testing import COLLECTIVE_EXTERNALEDITOR_FUNCTIONAL_TESTING  # noqa: E501
+from collective.externaleditor.testing import (  # noqa: E501
+    COLLECTIVE_EXTERNALEDITOR_FUNCTIONAL_TESTING,
+)
 from plone.testing import layered
 from unittest import TestSuite
 
