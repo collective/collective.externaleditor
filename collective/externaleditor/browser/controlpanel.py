@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.externaleditor import ExternalEditorMessageFactory as _
 from plone.app.registry.browser import controlpanel
 from plone.registry.interfaces import IRegistry
