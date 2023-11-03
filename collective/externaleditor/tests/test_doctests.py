@@ -10,12 +10,14 @@ import doctest
 OPTIONFLAGS = doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
 
 
-
 def test_suite():
     return TestSuite(
         [
             layered(
-                doctest.DocFileSuite(ft, optionflags=OPTIONFLAGS,),
+                doctest.DocFileSuite(
+                    ft,
+                    optionflags=OPTIONFLAGS,
+                ),
                 layer=COLLECTIVE_EXTERNALEDITOR_FUNCTIONAL_TESTING,
             )
             for ft in ["controlpanel.txt"]

@@ -8,7 +8,6 @@ import collective.externaleditor
 
 
 class CollectiveExternaleditorLayer(PloneSandboxLayer):
-
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
