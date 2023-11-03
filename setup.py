@@ -47,6 +47,7 @@ setup(
     zip_safe=False,
     install_requires=[
         "setuptools",
+        "Plone",
         "Products.ExternalEditor>=1.1.0dev",
         # -*- Extra requirements: -*-
     ],
