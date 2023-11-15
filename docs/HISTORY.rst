@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.4 (unreleased)
+2.0.0 (2023-11-15)
 ------------------
 
 - The test suite now works with Plone 5.2, Python3 and Products.ExternalEditor 3
