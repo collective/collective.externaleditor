@@ -2,6 +2,7 @@ from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import PloneSandboxLayer
+from plone.testing import zope
 
 import collective.externaleditor
 
@@ -14,6 +15,8 @@ class CollectiveExternaleditorLayer(PloneSandboxLayer):
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
         self.loadZCML(package=collective.externaleditor)
+        # a Zope instance imports every product: Folder.externalEditLink_
+        zope.installProduct(app, "Products.ExternalEditor")
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, "collective.externaleditor:default")

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object meta_type="Plone Actions Tool"
+        name="portal_actions"
+>
+  <object meta_type="CMF Action Category"
+          name="document_actions"
+  >
+    <!-- Plone's object/externalEditorEnabled finds our view (always true) -->
+    <object meta_type="CMF Action"
+            name="extedit"
+    >
+      <property name="available_expr">object/@@externalEditorEnabled/available</property>
+    </object>
+  </object>
+</object>

@@ -4,7 +4,10 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Show Plone's ``extedit`` document action only when external editing is
+  available: its ``object/externalEditorEnabled`` condition found our
+  (always true) view.
+  [chris-adam]
 
 
 2.0.0 (2023-11-15)
