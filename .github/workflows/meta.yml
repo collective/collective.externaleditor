@@ -26,16 +26,10 @@ on:
 jobs:
   qa:
     uses: plone/meta/.github/workflows/qa.yml@main
-  test:
-    uses: plone/meta/.github/workflows/test.yml@main
   coverage:
     uses: plone/meta/.github/workflows/coverage.yml@main
-#  dependencies:
-#    uses: plone/meta/.github/workflows/dependencies.yml@main
   release_ready:
     uses: plone/meta/.github/workflows/release_ready.yml@main
-#  circular:
-#    uses: plone/meta/.github/workflows/circular.yml@main
 
 ##
 # To modify the list of default jobs being created add in .meta.toml:
@@ -57,6 +51,15 @@ jobs:
 # os_dependencies = "git libxml2 libxslt"
 ##
 
+  test-plone62:
+    name: Plone 6.2 on Python 3.13
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.13"
+      - run: uvx --with tox-uv tox -e test-plone62
 
 ##
 # Specify additional jobs in .meta.toml:

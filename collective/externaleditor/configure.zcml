@@ -45,4 +45,12 @@
       sortkey="1"
       />
 
+  <genericsetup:upgradeDepends
+      title="Show the extedit action only when external editing is available"
+      profile="collective.externaleditor:default"
+      source="1001"
+      destination="1002"
+      import_steps="actions"
+      />
+
 </configure>
