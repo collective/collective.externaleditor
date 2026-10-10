@@ -9,4 +9,35 @@ commit-id = "fe7a1752"
 flake8_extra_lines = """
         exclude: skins
 """
-##
+
+[tox]
+extra_lines = """
+[testenv:test-plone62]
+description = run the distribution tests on Plone 6.2
+base = testenv:test
+# Plone 6.2 uses PEP 420 namespaces, hidden by an editable install of ours
+use_develop = false
+deps =
+    zope.testrunner
+    -c https://dist.plone.org/release/6.2-dev/constraints.txt
+commands =
+    zope-testrunner --all --test-path={envsitepackagesdir} -s collective.externaleditor {posargs}
+"""
+
+[github]
+jobs = [
+    "qa",
+    "coverage",
+    "release_ready",
+    ]
+extra_lines = """
+  test-plone62:
+    name: Plone 6.2 on Python 3.13
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.13"
+      - run: uvx --with tox-uv tox -e test-plone62
+"""
